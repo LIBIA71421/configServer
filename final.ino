@@ -90,17 +90,6 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
     }
 }
-void Connect() {
-    WiFi.begin(WIFI_SSID, WIFI_PASS);
-    Serial.println("Connecting to WiFi...");
-    while (WiFi.status() != WL_CONNECTED) {
-        delay(500);
-        Serial.print(".");
-    }
-    Serial.println("\nWiFi connected");
-    Serial.print("IP address: ");
-    Serial.println(WiFi.localIP());
-}
 
 void setup() {
     Serial.begin(115200);
